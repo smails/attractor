@@ -1,0 +1,85 @@
+.project
+  margin: 70px 0 50px
+  +screen('max', 1023)
+    margin: 50px 0
+  +screen('max', 767)
+    margin: 40px 0 20px
+  &__top
+    display: flex
+    align-items: start
+    justify-content: space-between
+    +screen('max', 767)
+      flex-wrap: wrap
+  &__title
+    +screen('max', 767)
+      margin-bottom: 15px
+  &__text
+    color: #747277
+    margin-bottom: 20px
+  &__box
+    display: none
+    &[data-content="1"]
+      display: block
+  &__slider
+    max-width: 570px
+    margin-left: 40px
+    width: 50%
+    display: none
+    +screen('max', 767)
+      width: 100%
+      order: -1
+      margin-left: 0
+    &[data-slider="1"]
+      display: block
+  &__content
+    width: 50%
+    +screen('max', 767)
+      width: 100%
+      margin-top: 20px
+  &__bottom
+    display: flex
+    align-items: center
+    padding: 30px 0 20px 0
+    background: #ffffff
+    margin-top: -50px
+    z-index: 99
+    position: relative
+    max-width: 74%
+    +screen('max', 1200)
+      max-width: 90%
+    +screen('max', 1023)
+      margin-top: 0
+      max-width: 100%
+    +screen('max', 767)
+      display: block
+  &__toggle
+    max-width: 270px
+    width: 30%
+    display: flex
+    align-items: center
+    border: 1px solid $color-4
+    margin-right: 30px
+    box-sizing: border-box
+    transition: .5s ease
+    &[data-toggle="1"]
+      border-color: $color-1
+    &:hover
+      border-color: $color-5
+    img
+      width: 95px
+      height: 70px
+      object-fit: cover
+    span
+      padding-left: 10px
+      +fs(14px)
+      color: $color-3
+    +screen('max', 1023)
+      margin-right: 10px
+      width: 33%
+    +screen('max', 767)
+      width: 100%
+      margin-right: 0
+      max-width: 100%
+      margin-bottom: 10px
+  .dis
+    display: none

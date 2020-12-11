@@ -1,0 +1,27 @@
+mixin project(title,caption,pic,link,text)
+  +b.project
+    .inner
+      +e.top
+        +e.content
+          +e.H2.title.heading-1=title
+          - for(var i = 0; i < 3; i++){
+              +e.box(data-content=i)
+                +e.P.text.text=text
+                  span=caption[i]
+                if link != undefined
+                  +link('Перейти в портфолио', link[i])
+          - }
+        - for(var i = 0; i < 3; i++){
+          +e.slider.swiper-container(data-slider=i)
+            .swiper-wrapper
+                .swiper-slide
+                  img(src="/images/"+ pic[i], alt="")
+            .swiper-button-prev
+            .swiper-button-next
+          - }
+      +e.bottom
+        - for(var i = 0; i < 3; i++){
+          +e.BUTTON.toggle(data-toggle=i)
+            img(src="/images/"+ pic[i], alt="")
+            span=caption[i]
+        - }

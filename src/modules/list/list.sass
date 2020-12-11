@@ -1,0 +1,37 @@
+.list
+  margin: 30px 0
+  position: relative
+  z-index: 4
+  +screen('max', 767)
+    margin: 15px 0
+  &__inner
+    display: flex
+    justify-content: space-between
+    max-width: 1155px
+    +screen('max', 767)
+      display: block
+  &__item
+    max-width: 370px
+    width: 32%
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1)
+    background: #ffffff
+    padding: 25px 20px
+    box-sizing: border-box
+    +screen('max', 767)
+      width: 100%
+      margin-bottom: 10px
+  &__head
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+  &__pic
+    width: 50px
+    height: 50px
+    object-fit: contain
+    margin-right: 30px
+  &__title
+    margin-bottom: 0
+  &__text
+    +fs(15px)
+    color: #747277
+    line-height: 22px

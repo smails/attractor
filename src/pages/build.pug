@@ -1,0 +1,14 @@
+include ../static/pug/_global
+<!DOCTYPE html>
+html
+  +head('Строительство')
+  body
+    main
+      +header()
+      +box-banner('/images/build-bg-1.jpg')
+      +breadcrumb(['Home Page', 'Construction'], 'Construction')
+      +list(['build-1.svg', 'build-2.svg', 'build-3.svg'])
+      +idea('build')
+      +call()
+      +footer()
+    include ../static/pug/_scripts

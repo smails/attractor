@@ -1,0 +1,215 @@
+.header
+  padding: 10px 0
+  background: #ffffff
+  position: relative
+  z-index: 9999
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    z-index: 9
+  &__pic
+    width: 180px
+    +screen('max', 1023)
+      width: 120px
+  &__info
+    +screen('max', 1023)
+      display: none
+      padding: 0 30px
+      box-sizing: border-box
+    +screen('max', 767)
+      text-align: center
+  &__cnt
+    +fs(14px)
+    color: $color-3
+    font-weight: 400
+    margin-bottom: 10px
+    display: block
+    +screen('max', 767)
+      font-weight: 700
+    &:last-child
+      margin-bottom: 0
+    svg
+      width: 18px
+      height: 18px
+      margin-right: 10px
+      vertical-align: middle
+      path
+        color: $color-1
+  &__burger
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 30px
+    height: 40px
+    position: relative
+    z-index: 9999
+    +screen('min', 1023)
+      display: none
+  &__social
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 30px
+    +screen('min', 1200)
+      display: none
+  &__social-link
+    width: 35px
+    height: 35px
+    margin-left: 10px
+    svg
+      width: 100%
+      height: 100%
+    path, circle
+      fill: $color-3
+      transition: .5s ease
+    &:hover
+      path, circle
+        fill: $color-1
+  &__menu
+    position: fixed
+    z-index: 9999
+    background: #ffffff
+    right: 0
+    top: 0
+    width: 0
+    height: 0
+    overflow: hidden
+    border-radius: 50%
+    transition: width .4s ease-in-out, height .4s ease-in-out
+    +screen('min', 1023)
+      display: none
+    &.open
+      width: 100%
+      height: 100vh
+      .nav
+        opacity: 1
+      .header__info
+        opacity: 1
+    &.full
+      border-radius: 0
+    .nav
+      display: block
+      margin-top: 25vh
+      opacity: 0
+      transition: .5s ease .8s
+    .header__info
+      display: block
+      margin-top: 3vh
+      opacity: 0
+      transition: .5s ease .8s
+  .overlay
+    width: 100%
+    position: absolute
+    left: 0
+    top: 100%
+    background: #fff
+    transition: .5s ease
+.burger
+  display: block
+  position: relative
+  height: 3px
+  transition: .4s
+  width: 28px
+  background: $color-1
+  &::after,
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    background: $color-1
+    width: 28px
+    height: 3px
+    transition: .4s
+  &::after
+    top: 8px
+  &::before
+    top: -8px
+  &.open
+    background: transparent!important
+    &::before,
+    &::after
+      top: 0;
+    &::after
+      transform: rotate(-45deg)
+    &::before
+      transform: rotate(45deg)
+.nav
+  +screen('max', 1023)
+    display: none
+  &__dropdown
+    width: 100%
+    position: absolute
+    left: 0
+    height: 0
+    overflow: hidden
+    transition: height .5s ease
+    +screen('max', 1023)
+      height: auto
+      position: relative
+    +screen('max', 767)
+      margin-top: 10px
+  &__list
+    display: flex
+    justify-content: center
+    align-items: center
+    +screen('max', 1023)
+      display: block
+  &__item
+    position: relative
+    text-align: left
+    padding: 25px 10px
+    margin-bottom: 0
+    text-align: center
+    +screen('max', 1023)
+      padding: 10px
+    &_level
+      padding: 0
+      &:first-of-type
+        .nav__link_level
+          padding-top: 15px
+    &:hover
+      .nav__dropdown
+        overflow: inherit
+      .nav__link
+        color: $color-1
+        &:after
+          opacity: 1
+  &__link
+    +fs(15px)
+    color: $color-3
+    transition: .5s ease
+    letter-spacing: 0.38px
+    position: relative
+    +screen('max', 767)
+      font-weight: 700
+    &:after
+      content: ''
+      display: block
+      width: 22px
+      height: 1px
+      background: $color-1
+      position: absolute
+      left: 0
+      bottom: 0
+      opacity: 0
+      transition: .5s ease
+    &_level
+      display: inline-block
+      white-space: nowrap
+      padding: 5px 10px
+      &:after
+        display: none
+.lang
+  display: flex
+  align-items: center
+  &__item
+    margin-bottom: 0
+  &__link
+    padding: 0 10px
+    color: #8b8794
+    letter-spacing: 0.38px
+    +fs(15px)
+    &.active
+      color: $color-3

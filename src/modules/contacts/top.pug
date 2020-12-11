@@ -1,0 +1,22 @@
++b.contacts-top
+  .inner
+    h1.text-center Мы невероятно быстро реагируем на ваши обращения
+      br
+      | и ценим ваши вопросы
+    h3.text-center Свяжитесь с нами
+    +e.list
+      +e.item
+        +e.IMG.pic(src="/icon/call.svg")
+        +e.P.title Позвоните нам
+        +e.subtitle Есть вопросы? Мы поможем! +34 64 79 79 007
+        +link('Позвонить', 'tel:+34647979007')
+      +e.item
+        +e.IMG.pic(src="/icon/icon-about-1.svg")
+        +e.P.title Напишите нам
+        +e.subtitle Мы ответим на любые вопросы! projects@attractor.es 
+        +link('Написать', 'mailto:projects@attractor.es')
+      +e.item
+        +e.IMG.pic(src="/icon/icon-about-6.svg")
+        +e.P.title Обратная связь
+        +e.subtitle Мы ответим на любые вопросы! info@attractor.es
+        +button('Заказать звонок', 'call')

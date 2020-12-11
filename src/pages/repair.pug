@@ -1,0 +1,16 @@
+include ../static/pug/_global
+<!DOCTYPE html>
+html
+  +head('Ремонт')
+  body
+    main
+      +header()
+      +box-banner('/images/repair-bg-1.jpg')
+      +breadcrumb(['Home Page', 'Renovation'], 'Renovation')
+      +project('Praesent sollicitudin semper lorem',['Redevelopment', 'Engineering systems', 'Coordination'],["repaier-project-1.jpg", "repaier-project-2.jpg", "repaier-project-3.jpg"],'','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.', 'none')
+      +box-banner('/images/repair-bg-2.jpg', 'right')
+      +list(['repair-1.svg', 'repair-2.svg', 'repair-3.svg'])
+      +content('repair')
+      +call()
+      +footer()
+    include ../static/pug/_scripts

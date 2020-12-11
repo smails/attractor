@@ -1,0 +1,15 @@
+include ../static/pug/_global
+<!DOCTYPE html>
+html
+  +head('О компании')
+  body
+    main
+      +header()
+      +breadcrumb(['Home Page', 'About as'], 'About as')
+      +box-banner()
+      +list()
+      +content('about')
+      +about()
+      +call()
+      +footer()
+    include ../static/pug/_scripts

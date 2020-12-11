@@ -1,0 +1,16 @@
+include ../static/pug/_global
+<!DOCTYPE html>
+html
+  +head('Дизайн интерьера')
+  body
+    main
+      +header()
+      +box-banner('/images/design-bg-1.jpg')
+      +breadcrumb(['Home Page', 'Interior Design'], 'Interior Design')
+      +project('Praesent sollicitudin semper lorem',['Redevelopment', 'Engineering systems', 'Coordination'],["design-project-1.jpg", "design-project-2.jpg", "design-project-3.jpg"],'','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.', 'none')
+      +list(['design-1.svg', 'design-2.svg', 'design-3.svg'])
+      +box-banner('/images/design-bg-2.jpg', 'right')
+      +content('design')
+      +call()
+      +footer()
+    include ../static/pug/_scripts

@@ -1,0 +1,14 @@
+include ../static/pug/_global
+<!DOCTYPE html>
+html
+  +head('Контакты')
+  body
+    main
+      +header()
+      +map()(class="page")
+      +breadcrumb(['Home Page', 'About Us', 'Contact details Attractor Development'], 'Contact details Attractor Development')
+      include ../modules/contacts/top
+      +call()
+      include ../modules/contacts/bottom
+      +footer()
+    include ../static/pug/_scripts

@@ -1,0 +1,11 @@
+include ../static/pug/_global
+<!DOCTYPE html>
+html
+  +head('Портфолио')
+  body
+    main
+      +header()
+      +breadcrumb(['Home Page', 'Portfolio'], 'Portfolio')
+      +portfolio()
+      +footer()
+    include ../static/pug/_scripts

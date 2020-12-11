@@ -1,0 +1,12 @@
+mixin callback(type)
+  +b.callback
+    +e.inner.inner
+      if type == 'form'
+        +e.H2.title.heading-2 Строим по всей Европе и не только
+        +e.text.text Находимся в Барселоне, но реализуем проекты в любой другой точке мира с постоянным качеством.
+        +e.FORM.action(action="")
+          +e.fields
+            +e.INPUT.input(placeholder="Имя*")
+            +e.INPUT.input(placeholder="Электронная почта" type="email")
+            +e.INPUT.input(placeholder="Телефон*")
+          +button("Отправить")(type="submit" class="callback__submit")

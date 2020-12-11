@@ -1,0 +1,30 @@
+mixin box-banner(img, pos)
+  if img != undefined
+    +b.box-banner
+      +e.IMG.pic(src=img, alt="")
+      +e.inner.inner(class=pos)
+        +e.content
+          +e.P.title Latin words, combined with a handful of
+            br
+            | model 
+            span structures
+  else
+    +b.box-banner
+      +e.row.inner
+        +e.left
+          +e.P.title_about Наша задача — избавить вас от больших забот, связанных 
+            br
+            span с ремонтом
+          +button('Заказать звонок', 'call')
+        +e.blockquote
+          h3 Основатели Attractor работали над
+            br
+            | строительными и архитектурными проектами
+            br
+            | в разных странах, преждем чем открыли 
+            br
+            | компанию в Испании. 
+          .text
+            p “Когда мы решили построить здесь дом для себя, у нас уже был большой опыт работы со строительными проектами, но мы даже не могли представить, как трудно идет процесс в Испании. 
+            p Все очень медленно, сложно найти профессионалов и доверить свой дом. Здесь редко соблюдают сроки, меняют расценки и не всегда выполняют работу качественно”.
+          .sign  — Директор Attractor Development S.L.

@@ -1,0 +1,23 @@
+mixin list(imgs)
+  +b.list
+    +e.inner.inner
+      if imgs != undefined
+        each img in imgs
+          +e.item
+            +e.head
+              +e.IMG.pic(src="/icon/" + img, alt="")
+              +e.H3.title Lorem Ipsum
+            +e.text Mauris commodo massa maximus mollis cursus. Donec ac mattis urna, non placerat ante. Nulla rhoncus vestibulum turpis. Proin et turpis at sem dictum mollis.
+      else
+          +e.item
+            +e.head
+              +e.H3.title Просто
+            +e.text Для наших клиентов ремонт и строительство становятся простыми задачами — мы помогаем с выбором, сразу указываем стоимость проекта и сдаем все в сроки.
+          +e.item
+            +e.head
+              +e.H3.title Понятно
+            +e.text Вы будете точно знать, какой результат получите: мы подготовим не только чертежи, но и наглядные визуализации с мебелью, светом и декором.
+          +e.item
+            +e.head
+              +e.H3.title Приятно
+            +e.text Мы возьмем всю сложную работу на себя, а вам оставим только самое приятное — выбор дизайна и согласование планировки с архитектором.

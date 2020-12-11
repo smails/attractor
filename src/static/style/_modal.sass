@@ -1,0 +1,139 @@
+.modal
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: rgba(#fff, .9)
+  z-index: 999
+  display: none
+  justify-content: center
+  align-items: center
+  opacity: 0
+  &__close
+    position: absolute
+    right: 40px
+    top: 40px
+    width: 25px
+    height: 25px
+    +screen('max', 767)
+      top: 20px
+    img
+      transition: .5s ease
+    &:hover
+      img
+        transform: rotate(180deg)
+  &__container
+    max-width: 720px
+    width: 100%
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1)
+    background-color: #ffffff
+    position: relative
+    padding: 45px
+    box-sizing: border-box
+    border-radius: 10px
+    display: none
+  &__subtitle
+    +fs(15px)
+    color: #747277
+    font-weight: 400
+  &__contain
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 30px 0
+  &__sign
+    +fs(17px)
+    color: $color-1
+  &__control
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__input
+    max-width: 200px
+    box-sizing: border-box
+    padding: 13px 20px
+    +fs(15px)
+    color: #747277
+    background: #ffffff
+    border: 1px solid $color-4
+    border-radius: 2px
+    width: 33%
+    flex-shrink: 0
+    transition: .5s ease
+    display: block
+    &::placeholder
+      color: $color-5
+    &:hover, &:focus
+      border-color: $color-5
+  .scroll-content
+    +screen('max', 370)
+      padding: 40px 0
+  .select2
+    max-width: 200px
+    width: 33%
+.success
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: rgba(#fff, .9)
+  z-index: 999
+  display: none
+  justify-content: center
+  align-items: center
+  opacity: 0
+  &__close
+    position: absolute
+    right: 40px
+    top: 40px
+    width: 25px
+    height: 25px
+    +screen('max', 767)
+      top: 20px
+    img
+      transition: .5s ease
+    &:hover
+      img
+        transform: rotate(180deg)
+  &__container
+    max-width: 720px
+    width: 100%
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1)
+    background-color: #ffffff
+    position: relative
+    padding: 45px
+    box-sizing: border-box
+    border-radius: 10px
+    display: none
+  &__sign
+    +fs(17px)
+    color: $color-1
+  &__subtitle
+    +fs(15px)
+    color: #747277
+    font-weight: 400
+    p
+      margin-top: 10px
+  &__control
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-top: 60px
+  &__social
+    display: flex
+    align-items: center
+  &__social-link
+    width: 35px
+    height: 35px
+    margin-right: 10px
+    svg
+      width: 100%
+      height: 100%
+    path, circle
+      fill: $color-3
+      transition: .5s ease
+    &:hover
+      path, circle
+        fill: $color-1

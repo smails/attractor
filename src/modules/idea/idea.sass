@@ -1,0 +1,31 @@
+.idea
+  margin-top: 60px
+  &__inner
+    max-width: 1010px
+  &__line
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+    +screen('max', 1023)
+      margin-bottom: 30px
+    +screen('max', 767)
+      flex-wrap: wrap
+  &__pic
+    width: 50%
+    max-width: 485px
+    object-fit: cover
+    +screen('max', 1023)
+      width: 45%
+      margin-right: 20px
+      height: 300px
+    +screen('max', 767)
+      width: 100%
+      order: -1
+  &__conetnt
+    max-width: 470px
+    +screen('max', 767)
+      margin-top: 20px
+  &__text
+    margin-bottom: 15px
+    color: #747277

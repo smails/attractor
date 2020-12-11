@@ -1,0 +1,10 @@
+mixin banner(page)
+  +b.banner
+    +e.VIDEO.video(autoplay='' loop=''  muted='' playsinline='' )
+      source(src='/video.mp4' )
+    +e.IMG.pic(src="/images/video-media.jpg")
+    +e.content
+      .inner
+        +e.H1.title Attractor Development
+        +e.P.subtitle — это студия, которая занимается строительством, дизайном интерьеров и продажей недвижимости. Мы не просто строим, мы создаем пространства для лучшей жизни, работы.
+        +button('Заказать звонок', 'call')(class="white")

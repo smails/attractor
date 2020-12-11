@@ -1,0 +1,243 @@
+.group
+  position: relative
+  margin-top: 30px
+  &__name
+    color: $color-1
+    position: absolute
+    top: 0
+    opacity: 0.5
+    +fs(16px)
+    transition: all .2s ease-in-out
+    z-index: 1
+    +screen('max', 767)
+      +fs(15px)
+      white-space: nowrap
+      text-overflow: ellipsis
+      width: 100%
+      display: block
+      overflow: hidden
+  &__field
+    display: block
+    width: 100%
+    padding: 3px 0
+    box-sizing: border-box
+    +fs(16px)
+    border-bottom: 1px solid rgba(150, 167, 177, .5)
+    letter-spacing: 0.8px
+    color: #000
+    min-height: 28px
+    position: relative
+    z-index: 3
+    line-height: 1
+    background: none
+    border-radius: 0
+    transition: all .2s ease-in-out
+    &:focus
+      border-bottom: 1px solid rgba(0,103,171, .5)
+    &.error
+      border-bottom: 1px solid #ff4657
+  &_half
+    width: 48%
+    +screen('max', 767)
+      width: 100%
+  .error-tooltip
+    position: absolute
+    left: 0
+    top: -19px
+    +fs(12px)
+    color: #d71111
+    font-weight: 400
+.textarea
+  max-width: 340px
+  width: 50%
+  margin-top: 32px
+  +screen('max', 767)
+    width: 100%
+  +screen('max', 370)
+    margin-top: 10px
+  &__name
+    color: $color-2
+    margin-bottom: 5px
+    display: block
+  &__field
+    border: 1px solid rgba(150, 167, 177, .5)
+    background: #fff
+    padding: 10px 12px 9px 17px
+    box-sizing: border-box
+    width: 100%
+    +fs(16px)
+    resize: none
+    min-height: 120px
+    max-height: 120px
+    +screen('max', 370)
+      min-height: 80px
+    &_price
+      min-height: 167px
+      max-height: 167px
+    &::-webkit-scrollbar
+      width: 5px
+      height: 3px
+      transition: .05s ease
+    &::-webkit-scrollbar-track
+      background-color: $color-4
+    &::-webkit-scrollbar-track-piece
+      background-color: #ffffff
+    &::-webkit-scrollbar-thumb
+      height: 50px
+      background-color: $color-4
+      border-radius: 3px
+    &::-webkit-scrollbar-corner
+      background-color: $color-4
+    &::-webkit-resizer
+      background-color: $color-4
+
+.form-add
+  margin-top: 20px
+  margin-bottom: 30px
+  min-height: 31px
+  input
+    display: none
+  &__sign
+    color: $color-1
+    line-height: 20px
+  ul
+  li
+    position: relative
+    display: flex
+    margin-bottom: 20px
+    padding-left: 40px
+    &::before
+      content: ''
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAABlUlEQVQ4T63VXVKCUBQH8P/R6jV3EO6AVhDtQOmpUWfcQdwdsINLK9AmGJ8CXIG2gtpBLMHHJovTXEBE/AJHXhl+c74hnPjISaA1/vgOTK24gXfR636uKKprylHQostYAjQsfTtnIqHwWmgK8gxAm8E2mo0Q31jgAgaIHQKueUntyugGSGQU01URZ+8jBsJK6DFwVQb5+mYT0dNRtCqYROsFQ2IeHUTLIH4Q4QpaOfVSpNZedAsEdGKWAFoAIm7SvXjsRjmYNvGLgelOdA84YuAFTGPVaQWLvtkpNCmdiibpW+ghUPTNZDal5zuIoYuBaeyq+QZaDQxUGWbM/IzfhpPPbWHMcrQWCEyxJGsXqDJJ0HOCa9T11b5qnKUgXV91db6uYZbykQjzg5JtgbUCywdGevXAJNIkKkIoeqZ1DjBBHddfMLMjBg92ET0lwnX6rq+uyo3VN2/z7SikrOoqXX9MQGdficoZUhbRh9oQIhozx5o6wGp78kZNAk19WFzLQ8c9HSkv0MFsE2AwEIE5LJejzh/iH/JhUpx6Au3dAAAAAElFTkSuQmCC)
+      margin-right: 20px
+      width: 25px
+      height: 20px
+      top: 0
+      left: 2px
+    span
+      +fs(19px)
+      color: $color-1
+      width: 100%
+      display: block
+      overflow: hidden
+      text-overflow: ellipsis
+    .clear-form
+      color: $color-1
+      +fs(19px)
+      transition: .5s ease-in-out
+      flex-shrink: 0
+      &:hover
+        color: $color-3
+.add-file
+  &:hover
+    cursor: pointer
+    span
+      color: $color-3
+    .add-file__icon
+      background-position: left bottom
+  span
+    display: flex
+    align-items: center
+  &__icon
+    width: 31px
+    height: 31px
+    background-image: url(../icon/add.svg)
+    background-position: left top
+    background-repeat: no-repeat
+    display: inline-block
+    margin-right: 20px
+    background-size: cover
+  span
+    +fs(19px)
+    color: $color-1
+
+.checkbox
+  display: block
+  cursor: pointer
+  &__hidden
+    display: none
+    &:checked + .checkbox__text:after
+      opacity: 1
+    &:checked + .checkbox__text:before
+      opacity: 1
+      background-color: $color-1
+      border-color: $color-1
+    &.error + .checkbox__text:before
+      border: 1px solid #ff4657
+  &__text
+    +fs(14px)
+    padding-left: 30px
+    position: relative
+    color: #747277
+    &::before
+      content: ''
+      width: 22px
+      height: 22px
+      border-radius: 2px
+      border: 1px solid $color-4
+      background-color: #ffffff
+      transition: .5s ease-in-out
+      position: absolute
+      left: 0
+      top: -3px
+    &:hover
+      &::before
+        border-color: $color-5
+    &:after
+      content: ''
+      width: 23px
+      height: 23px
+      background-image: url(../icon/checkbox.svg)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: 60%
+      position: absolute
+      left: 0px
+      top: -3px
+      opacity: 0
+      transition: .5s ease-in-out
+.radio
+  display: block
+  cursor: pointer
+  &__hidden
+    display: none
+    &:checked + .radio__text::after
+      opacity: 1
+    &:checked + .radio__text::before
+      border-color: $color-5
+    &.error + .radio__text:before
+      border: 1px solid #ff4657
+  &__text
+    +fs(15px)
+    padding-left: 30px
+    position: relative
+    color: #747277
+    +screen('max', 767)
+      +fs(18px)
+    &::before
+      content: ''
+      width: 15px
+      height: 15px
+      border-radius: 2px
+      border: 1px solid $color-4
+      background-color: #ffffff
+      transition: .5s ease-in-out
+      position: absolute
+      left: 0
+      top: 0px
+      border-radius: 100%
+    &:after
+      content: ''
+      width: 5px
+      height: 5px
+      position: absolute
+      left: 8px
+      top: 8px
+      transform: translate(-45%, -45%)
+      border-radius: 100%
+      background-color: $color-2
+      opacity: 0
+      transition: .5s ease-in-out
+    &:hover
+      &::before
+        border-color: $color-5

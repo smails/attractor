@@ -1,0 +1,41 @@
+.callback
+  margin-top: 70px
+  +screen('max', 767)
+    margin-top: 40px
+  &__inner
+    max-width: 1010px
+  &__text
+    max-width: 500px
+    color: #747277
+  &__action
+    margin-top: 30px
+    text-align: right
+    +screen('max', 767)
+      margin-top: 15px
+  &__fields
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +screen('max', 767)
+      display: block
+  &__input
+    max-width: 295px
+    box-sizing: border-box
+    padding: 13px 20px
+    +fs(15px)
+    color: #747277
+    background: #ffffff
+    border: 1px solid $color-4
+    border-radius: 2px
+    width: 33%
+    transition: .5s ease
+    +screen('max', 767)
+      width: 100%
+      max-width: 100%
+      margin-bottom: 10px
+    &::placeholder
+      color: $color-5
+    &:hover, &:focus
+      border-color: $color-5
+  &__submit
+    margin-top: 25px

@@ -1,0 +1,61 @@
+.button
+  display: inline-flex
+  align-items: center
+  +fs(12px)
+  color: $color-1
+  text-transform: uppercase
+  span
+    padding-right: 10px
+    font-weight: 700
+  &.white
+    color: #ffffff
+    path
+      fill: #fff
+.info
+  position: fixed
+  display: flex
+  flex-flow: column
+  align-items: center
+  justify-content: center
+  right: 2%
+  bottom: 40px
+  +screen('max', 767)
+    right: 5px
+    bottom: 50px
+  &__box
+    height: 0
+    overflow: hidden
+    transition: .5s ease
+  &__btn, &__toggle
+    width: 60px
+    height: 60px
+    background-color: $color-3
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 100%
+    margin-bottom: 10px
+    svg
+      width: 30px
+      height: 30px
+      path
+        fill: #fff
+    &:hover
+      background-color: $color-1
+  &__toggle
+    transition: .5s ease
+    cursor: pointer
+    animation: pulse 2s infinite
+    &.hover
+      background-color: $color-1
+      animation: none
+      .info__icon
+        transform: rotate(180deg)
+  &__icon
+    width: 30px
+    height: 30px
+    transition: .5s ease
+  .hide
+    animation: hide 1s linear forwards
+  .show
+    animation: show 1s linear forwards

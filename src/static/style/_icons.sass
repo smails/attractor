@@ -1,0 +1,56 @@
+.i-arrow
+	width: 19px
+	height: 9px
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAALCAYAAACQy8Z9AAABNUlEQVQ4T53Tz00CQRgF8Pc2JFwIQgdDBdKBUAF0IByBC1uBJeAFOAIdQAVqB9CAbgcgctlk5ZlvlzUiLEHnNJPM/Pb7t3TDbcsjG3tGftApB/jncuO185Qb7KUFK+OPOYQGgI3EetArLP/quuGuSuoJQAnEgm6wLjGfmwO4S2D5Qa84vRa2TEkOYhB4URg1mT6ujLZTgPd2ltS+Bj6Ak8TQ7K1bbNnuG7WDG+36hOyrIDl97RTaWREfBQH6QbfwmN49QmM4Sccu3BCY78OoHfjlTfrAyuXlcxMBzaysTtAEjgv/bDCApcKobvCh/taQKoB3ibVzjT2LxvB47ai4gbdpA0nvAZADsJLYypqUTDSGk8mwiA1O10phVPtZkt91v4ieToZmCj/7l8CT7l+aTavztT/GF+bmjxxfU76BAAAAAElFTkSuQmCC')
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: center
+	transition: transform .9s cubic-bezier(.215,.61,.355,1)
+.social-icon
+	display: inline-block
+	background-repeat: no-repeat
+	width: 24px
+	height: 23px
+	background-image: url(../svg/sprite-social-icon.svg)
+	background-position-y: center
+	transition: .5s ease-in-out
+	&_ok
+		background-position-x: -54px
+	&_fb
+		background-position-x: -111px
+	&_in
+		background-position-x: -168px
+.social-link
+	&:hover
+		.social-icon
+			background-image: url(../images/sprite-social-icon-hover.png)
+.app-icon
+	display: inline-block
+	background-repeat: no-repeat
+	width: 21px
+	height: 26px
+	background-image: url(../svg/sprite-app-icon.svg)
+	background-position-x: left
+	&_store
+		background-position-y: -69px
+.i-selected-tram
+	width: 40px
+	height: 54px
+	display: inline-block
+	background-image: url(../svg/i-selected-tram.svg)
+	background-repeat: no-repeat
+	background-position: center
+.icon-transport
+	display: inline-block
+	width: 41px
+	height: 41px
+	margin-right: 10px
+	+screen('max', 1280)
+		transform: scale(.8)
+		margin-right: 0px
+.icon-check
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAYAAAAi2ky3AAAAnklEQVQ4T6XS0RVAIBgF4O4AzMAmRuER8+CxTMImzMAAv1NOTnVC0Wv1nVv3B/u5smEv1jqZ8cfJuq0EwAGIz5BGziA0foJcZGnSMhryITJTFHSHREFPyAXl/SaI2Ly2qfC1+IYoSM4BiE3q74kqFwtBrkTmYRMLRaw/cjG1CXA9J7Lip+G1WrMT6Gs0viHe1mKeYyb0ztGJsSIkicYOdl9npMNeVEMAAAAASUVORK5CYII=)
+	background-position: center
+	background-repeat: no-repeat
+	width: 18px
+	height: 14px

@@ -1,0 +1,40 @@
++b.portfolio
+  +e.inner.inner
+    +e.slider
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            img(src="/images/portfolio-1.jpg", alt="")
+        .swiper-button-prev
+        .swiper-button-next
+    +e.meta-top
+      +b.intelligence
+        +e.item
+          +e.IMG.pic(src='/icon/home.svg')
+          +e.P.title Apartment
+        +e.item
+          +e.IMG.pic(src='/icon/timer.svg')
+          +e.P.title 2 months
+        +e.item
+          +e.IMG.pic(src='/icon/paper-size.svg')
+          +e.P.title 85 м2
+        +e.item
+          +e.IMG.pic(src='/icon/pin.svg')
+          +e.P.title Sant Gervasi, Barcelona
+      +e.SPAN.date 13 th of November 2020
+    +e.info
+      +e.H3.title Name lorem ipsum
+      +e.text.text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.
+    +e.beforeafter
+      +e.col
+        +e.IMG.picure(src="/images/portfolio-1.jpg")
+        +e.P.title Before
+      +e.col
+        +e.IMG.picure(src="/images/portfolio-1.jpg")
+        +e.P.title After
+    +e.text.text It vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus.
+    +e.gallery
+      - for (var i = 0; i < 12; i++) {
+        +e.A.gallery-item(data-fancybox href="/images/portfolio-1.jpg")
+          +e.IMG.gallery-pic(src="/images/portfolio-1.jpg")
+      - }

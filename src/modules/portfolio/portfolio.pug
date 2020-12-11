@@ -1,0 +1,176 @@
+mixin portfolio(vars)
+  +b.portfolio
+    +e.inner.inner
+      +e.tabs
+        +e.BUTTON.tabs-btn.active All
+        +e.BUTTON.tabs-btn Construction
+        +e.BUTTON.tabs-btn Renovation
+        +e.BUTTON.tabs-btn Interior Design
+        +e.BUTTON.tabs-btn Developers
+      +e.row
+        +e.BUTTON.mobile-aside Фильтр
+        +e.section
+          +e.item
+            +e.slider
+              .swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                      img(src="/images/portfolio-1.jpg", alt="")
+                .swiper-button-prev
+                .swiper-button-next
+            +b.intelligence
+              +e.item
+                +e.IMG.pic(src='/icon/home.svg')
+                +e.P.title Apartment
+              +e.item
+                +e.IMG.pic(src='/icon/timer.svg')
+                +e.P.title 2 months
+              +e.item
+                +e.IMG.pic(src='/icon/paper-size.svg')
+                +e.P.title 85 м2
+              +e.item
+                +e.IMG.pic(src='/icon/pin.svg')
+                +e.P.title Sant Gervasi, Barcelona
+            +e.info
+              +e.H3.title Name lorem ipsum
+              +e.text.text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.
+              +e.meta
+                +e.SPAN.date 13 th of November 2020
+                +link('Подробнее', '#')
+          +e.item
+            +e.slider.swiper-container
+              .swiper-wrapper
+                  .swiper-slide
+                    img(src="/images/portfolio-2.jpg", alt="")
+              .swiper-button-prev
+              .swiper-button-next
+            +b.intelligence
+              +e.item
+                +e.IMG.pic(src='/icon/home.svg')
+                +e.P.title Apartment
+              +e.item
+                +e.IMG.pic(src='/icon/timer.svg')
+                +e.P.title 2 months
+              +e.item
+                +e.IMG.pic(src='/icon/paper-size.svg')
+                +e.P.title 85 м2
+              +e.item
+                +e.IMG.pic(src='/icon/pin.svg')
+                +e.P.title Sant Gervasi, Barcelona
+            +e.info
+              +e.H3.title Name lorem ipsum
+              +e.text.text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.
+              +e.meta
+                +e.SPAN.date 18 th of November 2020
+                +link('Подробнее', '#')
+          +e.item
+            +e.slider.swiper-container
+              .swiper-wrapper
+                  .swiper-slide
+                    img(src="/images/portfolio-3.jpg", alt="")
+              .swiper-button-prev
+              .swiper-button-next
+            +b.intelligence
+              +e.item
+                +e.IMG.pic(src='/icon/home.svg')
+                +e.P.title Apartment
+              +e.item
+                +e.IMG.pic(src='/icon/timer.svg')
+                +e.P.title 2 months
+              +e.item
+                +e.IMG.pic(src='/icon/paper-size.svg')
+                +e.P.title 85 м2
+              +e.item
+                +e.IMG.pic(src='/icon/pin.svg')
+                +e.P.title Sant Gervasi, Barcelona
+            +e.info
+              +e.H3.title Name lorem ipsum
+              +e.text.text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.
+              +e.meta
+                +e.SPAN.date 18 th of November 2020
+                +link('Подробнее', '#')
+          +e.item
+            +e.slider.swiper-container
+              .swiper-wrapper
+                  .swiper-slide
+                    img(src="/images/portfolio-1.jpg", alt="")
+              .swiper-button-prev
+              .swiper-button-next
+            +b.intelligence
+              +e.item
+                +e.IMG.pic(src='/icon/home.svg')
+                +e.P.title Apartment
+              +e.item
+                +e.IMG.pic(src='/icon/timer.svg')
+                +e.P.title 2 months
+              +e.item
+                +e.IMG.pic(src='/icon/paper-size.svg')
+                +e.P.title 85 м2
+              +e.item
+                +e.IMG.pic(src='/icon/pin.svg')
+                +e.P.title Sant Gervasi, Barcelona
+            +e.info
+              +e.H3.title Name lorem ipsum
+              +e.text.text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.
+              +e.meta
+                +e.SPAN.date 13 th of November 2020
+                +link('Подробнее', '#')
+        +e.aside
+          +b.sort
+            +e.title Select type:
+            +e.A.link.active
+              span All
+              span.numb 12
+            +e.A.link
+              span Construction
+              span.numb 5
+            +e.A.link
+              span Renovation
+              span.numb 4
+            +e.A.link
+              span Interior Design
+              span.numb 2
+            +e.A.link
+              span Developers
+              span.numb 1
+            +e.title Select room:
+            +b.SELECT.select
+              option(value="" disabled selected placeholder="Any type") Any type
+              option(value="1 room") 1 room
+              option(value="2 room") 2 room
+              option(value="3 room") 3 room
+            +e.title Select colour:
+            +b.SELECT.select
+              option(value="" disabled selected placeholder="Any type") Any type
+              option(value="White") White
+              option(value="Orange") Orange
+              option(value="Black") Black
+            +e.title Select design:
+            +e.checkbox
+              +e.col
+                +b.LABEL.checkbox
+                  +e.INPUT.hidden(type="checkbox" name="All")
+                  +e.SPAN.text All
+                +b.LABEL.checkbox
+                  +e.INPUT.hidden(type="checkbox" name="Traditional")
+                  +e.SPAN.text Traditional
+                +b.LABEL.checkbox
+                  +e.INPUT.hidden(type="checkbox" name="Contemporary")
+                  +e.SPAN.text Contemporary
+                +b.LABEL.checkbox
+                  +e.INPUT.hidden(type="checkbox" name="Minimalist")
+                  +e.SPAN.text Minimalist
+              +e.col
+                +b.LABEL.checkbox
+                  +e.INPUT.hidden(type="checkbox" name="Mid-Century Modern")
+                  +e.SPAN.text Mid-Century Modern 
+                +b.LABEL.checkbox
+                  +e.INPUT.hidden(type="checkbox" name="Shabby Chic")
+                  +e.SPAN.text Shabby Chic
+                +b.LABEL.checkbox
+                  +e.INPUT.hidden(type="checkbox" name="Scandinavian")
+                  +e.SPAN.text Scandinavian
+                +b.LABEL.checkbox
+                  +e.INPUT.hidden(type="checkbox" name="Industrial")
+                  +e.SPAN.text Industrial
+            +button('Применить')

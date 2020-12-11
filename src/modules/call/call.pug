@@ -1,0 +1,53 @@
+mixin call(vars)
+  +b.constructor
+    +e.inner.inner
+      +e.H2.title Contrary to popular belief, lorem ipsum
+      +e.FORM.action
+        +e.P.caption Площадь помещения
+        +e.slider
+          .slider
+          .count
+          .dash
+            - for(var i = 0; i < 6; i++){
+              if i == 0
+                p.visible=i*100
+              else
+                p=i*100
+            - }
+        +e.P.caption Тип команты
+        +e.radios
+          +b.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="typeroom")
+            +e.SPAN.text Вся квартира
+          +b.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="typeroom")
+            +e.SPAN.text Спальня
+          +b.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="typeroom")
+            +e.SPAN.text Гостиная
+          +b.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="typeroom")
+            +e.SPAN.text Ванная
+          +b.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="typeroom")
+            +e.SPAN.text Кухня
+          +b.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="typeroom")
+            +e.SPAN.text Другое
+        +e.fields
+          +e.col
+            +e.P.caption Контактные данные
+            +e.INPUT.input(placeholder="Имя*")
+            +e.INPUT.input(placeholder="Электронная почта" type="email")
+            +e.INPUT.input(placeholder="Телефон*")
+          +e.col
+            +e.P.caption Время звонка
+            +b.SELECT.select
+              option(value="" disabled selected placeholder="Любое") Любое
+              option(value="10:00-12:00") 10:00-12:00
+              option(value="12:00-14:00") 12:00-14:00
+              option(value="14:00-16:00") 14:00-16:00
+              option(value="16:00-18:00") 16:00-18:00
+        +e.footer
+          +e.sign Нажимая на кнопку «Заказать консультацию» я принимаю условия Пользовательского Соглашения.
+          +button("Заказать консультацию")(type="submit" class="constructor__submit")

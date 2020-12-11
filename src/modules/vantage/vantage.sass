@@ -1,0 +1,37 @@
+.vantage
+  padding: 160px 0 100px
+  background-image: url(../images/index-bg-1.jpg)
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  +screen('max', 1200)
+    padding: 100px 0
+  +screen('max', 1023)
+    padding: 50px 20px
+    box-sizing: border-box
+  &__contain
+    max-width: 860px
+    width: 100%
+    margin: 0 auto
+  &__title, &__caption
+    color: #ffffff
+  &__title
+    margin-bottom: 50px
+    +screen('max', 767)
+      margin-bottom: 30px
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: start
+    flex-wrap: wrap
+    +screen('max', 767)
+      display: block
+  &__item
+    max-width: 380px
+    width: 50%
+    margin-bottom: 50px
+    color: #ffffff
+    +screen('max', 767)
+      width: 100%
+      max-width: 100%
+      margin-bottom: 30px
